@@ -1,0 +1,251 @@
+{
+  "library": "requests",
+  "version": "2.31.0",
+  "source": {
+    "name": "requests official documentation",
+    "url": "https://requests.readthedocs.io/en/v2.31.0/api/"
+  },
+  "snapshotCompleteness": "partial",
+  "notes": "Covers the top-level convenience functions in the requests module. Does not cover requests.Session methods, requests.adapters, requests.models, or internal utilities. Parameter lists and positional signatures reflect official requests 2.31.0 API definitions.",
+  "symbols": {
+    "requests.request": {
+      "kind": "function",
+      "module": "requests",
+      "description": "Constructs and sends a Request.",
+      "parameters": [
+        "method",
+        "url",
+        "params",
+        "data",
+        "json",
+        "headers",
+        "cookies",
+        "files",
+        "auth",
+        "timeout",
+        "allow_redirects",
+        "proxies",
+        "hooks",
+        "stream",
+        "verify",
+        "cert"
+      ],
+      "parameterCompleteness": "verified",
+      "positionalParameters": [
+        "method",
+        "url"
+      ],
+      "minPositionalArguments": 2,
+      "maxPositionalArguments": 2,
+      "signatureCompleteness": "verified"
+    },
+    "requests.get": {
+      "kind": "function",
+      "module": "requests",
+      "description": "Sends a GET request.",
+      "parameters": [
+        "url",
+        "params",
+        "data",
+        "json",
+        "headers",
+        "cookies",
+        "files",
+        "auth",
+        "timeout",
+        "allow_redirects",
+        "proxies",
+        "hooks",
+        "stream",
+        "verify",
+        "cert"
+      ],
+      "parameterCompleteness": "verified",
+      "positionalParameters": [
+        "url",
+        "params"
+      ],
+      "minPositionalArguments": 1,
+      "maxPositionalArguments": 2,
+      "signatureCompleteness": "verified"
+    },
+    "requests.post": {
+      "kind": "function",
+      "module": "requests",
+      "description": "Sends a POST request.",
+      "parameters": [
+        "url",
+        "data",
+        "json",
+        "params",
+        "headers",
+        "cookies",
+        "files",
+        "auth",
+        "timeout",
+        "allow_redirects",
+        "proxies",
+        "hooks",
+        "stream",
+        "verify",
+        "cert"
+      ],
+      "parameterCompleteness": "verified",
+      "positionalParameters": [
+        "url",
+        "data",
+        "json"
+      ],
+      "minPositionalArguments": 1,
+      "maxPositionalArguments": 3,
+      "signatureCompleteness": "verified"
+    },
+    "requests.put": {
+      "kind": "function",
+      "module": "requests",
+      "description": "Sends a PUT request.",
+      "parameters": [
+        "url",
+        "data",
+        "json",
+        "params",
+        "headers",
+        "cookies",
+        "files",
+        "auth",
+        "timeout",
+        "allow_redirects",
+        "proxies",
+        "hooks",
+        "stream",
+        "verify",
+        "cert"
+      ],
+      "parameterCompleteness": "verified",
+      "positionalParameters": [
+        "url",
+        "data"
+      ],
+      "minPositionalArguments": 1,
+      "maxPositionalArguments": 2,
+      "signatureCompleteness": "verified"
+    },
+    "requests.patch": {
+      "kind": "function",
+      "module": "requests",
+      "description": "Sends a PATCH request.",
+      "parameters": [
+        "url",
+        "data",
+        "json",
+        "params",
+        "headers",
+        "cookies",
+        "files",
+        "auth",
+        "timeout",
+        "allow_redirects",
+        "proxies",
+        "hooks",
+        "stream",
+        "verify",
+        "cert"
+      ],
+      "parameterCompleteness": "verified",
+      "positionalParameters": [
+        "url",
+        "data"
+      ],
+      "minPositionalArguments": 1,
+      "maxPositionalArguments": 2,
+      "signatureCompleteness": "verified"
+    },
+    "requests.delete": {
+      "kind": "function",
+      "module": "requests",
+      "description": "Sends a DELETE request.",
+      "parameters": [
+        "url",
+        "params",
+        "data",
+        "json",
+        "headers",
+        "cookies",
+        "files",
+        "auth",
+        "timeout",
+        "allow_redirects",
+        "proxies",
+        "hooks",
+        "stream",
+        "verify",
+        "cert"
+      ],
+      "parameterCompleteness": "verified",
+      "positionalParameters": [
+        "url"
+      ],
+      "minPositionalArguments": 1,
+      "maxPositionalArguments": 1,
+      "signatureCompleteness": "verified"
+    },
+    "requests.head": {
+      "kind": "function",
+      "module": "requests",
+      "description": "Sends a HEAD request.",
+      "parameters": [
+        "url",
+        "params",
+        "data",
+        "json",
+        "headers",
+        "cookies",
+        "files",
+        "auth",
+        "timeout",
+        "allow_redirects",
+        "proxies",
+        "hooks",
+        "stream",
+        "verify",
+        "cert"
+      ],
+      "parameterCompleteness": "verified",
+      "positionalParameters": [
+        "url"
+      ],
+      "minPositionalArguments": 1,
+      "maxPositionalArguments": 1,
+      "signatureCompleteness": "verified"
+    },
+    "requests.options": {
+      "kind": "function",
+      "module": "requests",
+      "description": "Sends an OPTIONS request.",
+      "parameters": [
+        "url",
+        "params",
+        "data",
+        "json",
+        "headers",
+        "cookies",
+        "files",
+        "auth",
+        "timeout",
+        "allow_redirects",
+        "proxies",
+        "hooks",
+        "stream",
+        "verify",
+        "cert"
+      ],
+      "parameterCompleteness": "verified",
+      "positionalParameters": [
+        "url"
+      ],
+      "minPositionalArguments": 1,
+      "maxPositionalArguments": 1,
+      "signatureCompleteness": "verified"
+    }
+  }
+}

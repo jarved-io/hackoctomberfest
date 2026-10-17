@@ -1,0 +1,38 @@
+{
+  "_comment": "HINTS ONLY. Used for 'closest valid alternative'. Never used to decide existence - tests/test_truth_db.py::test_curated_hints_are_honest proves every 'wrong' name is absent and every 'use' target is present in all snapshots.",
+  "symbol_corrections": {
+    "requests.fetch":        {"use": "requests.get",  "note": "No fetch(); HTTP verbs are get/post/put/patch/delete/head/options."},
+    "requests.get_json":     {"use": "requests.get",  "note": "Call .json() on the Response: requests.get(url).json()"},
+    "requests.post_json":    {"use": "requests.post", "note": "Pass json=payload to requests.post."},
+    "requests.http_get":     {"use": "requests.get"},
+    "requests.download":     {"use": "requests.get",  "note": "Use get(url, stream=True) and iterate Response.iter_content()."},
+    "requests.Client":       {"use": "requests.Session", "note": "Client is httpx; requests uses Session."},
+    "requests.AsyncSession": {"use": "requests.Session", "note": "requests is synchronous only."},
+    "requests.Session.fetch":{"use": "requests.Session.get"},
+    "requests.Response.json_data": {"use": "requests.Response.json"},
+    "requests.Response.status": {"use": "requests.Response.status_code"},
+    "requests.Response.body":   {"use": "requests.Response.content"},
+    "requests.Response.is_ok":  {"use": "requests.Response.ok"},
+    "requests.exceptions.TimeoutError": {"use": "requests.exceptions.Timeout"},
+    "requests.exceptions.HTTPException": {"use": "requests.exceptions.HTTPError"},
+    "requests.exceptions.ConnectionFailed": {"use": "requests.exceptions.ConnectionError"}
+  },
+  "argument_corrections": {
+    "timeout_seconds": {"use": "timeout",         "note": "Single name 'timeout' (seconds, or (connect, read) tuple)."},
+    "timeout_ms":      {"use": "timeout",         "note": "timeout is in seconds, not milliseconds."},
+    "follow_redirects":{"use": "allow_redirects", "note": "follow_redirects is httpx."},
+    "verify_ssl":      {"use": "verify"},
+    "ssl_verify":      {"use": "verify"},
+    "query":           {"use": "params"},
+    "query_params":    {"use": "params"},
+    "body":            {"use": "data",            "note": "Use data= for form/raw body, json= for JSON."},
+    "json_body":       {"use": "json"},
+    "payload":         {"use": "json"},
+    "header":          {"use": "headers"},
+    "retries":         {"use": "timeout",         "note": "No retries kwarg; mount an HTTPAdapter(max_retries=...) on a Session."},
+    "proxy":           {"use": "proxies",         "note": "Dict: {'https': 'http://host:port'}"},
+    "basic_auth":      {"use": "auth",            "note": "auth=(user, password) or an AuthBase."},
+    "cookie":          {"use": "cookies"},
+    "max_redirects":   {"use": "allow_redirects"}
+  }
+}

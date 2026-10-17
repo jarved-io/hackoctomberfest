@@ -1,0 +1,13 @@
+# API Hallucination Firewall - backend dependencies.   pip install -r requirements.txt
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30
+pydantic>=2.7
+python-dotenv>=1.0
+
+# Tests
+pytest>=8.0
+httpx>=0.27
+
+# Optional: official Google SDK for Gemma. Without it the ai_module automatically
+# falls back to Google's REST API using only the standard library.
+# google-genai
